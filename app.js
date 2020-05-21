@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const geolib = require("geolib");
 var app = express();
 const TelegramBot = require("node-telegram-bot-api");
-const token = process.env.TOKEN; // "1224601107:AAHjkdZEF13j4aPKaevbni5gW42xxRSMTBc";
+const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 bot.on("location", (msg) => {
   console.log(msg, "location is here!!!!");
